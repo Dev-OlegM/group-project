@@ -11,6 +11,7 @@
   margin-right: auto;
 }
 
+
 .directions__list {
   display: flex;
   align-items: center;
@@ -147,7 +148,7 @@
     height: 256px;
     left: 215px;
     top: 6px;
-    border-right: 2px dashed #ddd;
+    border-right: 1px dashed #ddd;
   }
 
   .directions__blocks-item:nth-child(n + 3):after {
@@ -158,6 +159,50 @@
     height: 10px;
     left: 5px;
     top: 0px;
-    border-top: 2px dashed #ddd;
+    border-top: 1px dashed #ddd;
+  }
+
+  .directions__blocks-item:hover .directions__blocks-age::after {
+    background-image: url(../images/icons/arrow-hover.png);
+    width: 39px;
+    height: 13px;
+  }
+}
+
+/* PC */
+
+@media screen and (min-width: 1100px) {
+  .directions__blocks {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .container {
+    width: 1100px;
+    
+  }
+  
+  .directions__blocks-item {
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+
+  .directions__blocks-item:hover {
+    border-radius: 5px;
+
+  }
+
+  .directions__blocks-item:hover .directions__blocks-age::after {
+    background-image: url(../images/icons/arrow-hover.png);
+    width: 39px;
+    height: 13px;
+  }
+
+  .directions__blocks-item:nth-child(-n + 3) {
+    border-right: 1px dashed #ddd;
+  }
+  
+  .directions__blocks-item:nth-child(-n + 3):hover {
+    border: none;
   }
 }
